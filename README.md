@@ -3,6 +3,24 @@
 `AppInput` is a TypeScript class designed to generate flexible form inputs compatible with `@jdlien/validator`.
 To use this class, you can create an instance of `AppInput` with the desired attributes and call its methods to generate HTML for form inputs.
 
+This documentation is an early work in progress and needs further enhancement.
+
+## Example Usage:
+
+The following will generate a select input with options from an array of objects and assign the resulting HTMLDivElement to `inputEl`:
+
+```typescript
+const inputEl = new AppInput({
+  type: "select",
+  name: "new-input",
+  label: "New Input",
+  error: "Please select an option.",
+  required: true,
+  options: optionData.map((item) => ({ value: item.id, label: item.name })),
+  value: "someValue",
+}).getFormItem();
+```
+
 ## Types
 
 ### `OptionType`
@@ -67,3 +85,7 @@ Constructor and methods:
 - **getFormItemHTML()**: Returns the outerHTML of the form item.
 
 This class can be extended or modified to suit specific form input needs, providing a robust solution for dynamically generating form inputs in web applications.
+
+```
+
+```
