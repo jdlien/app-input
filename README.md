@@ -89,6 +89,15 @@ You can pass any attributes you want to the `AppInput` constructor, including `d
 - `horizontal`: Set to true to make all options in a radio or checkbox input appear on the same line.
 - `noErrorEl`: Set to true to prevent the creation of an error element.
 
-Constructor and methods:
+## Constructor and public methods:
 
 - **constructor(attributes: IAttributes & AnyAttributes)**: Initializes a new instance of `AppInput` with the provided attributes.
+
+- `start()`: Returns the start of the input element, including the label and any prefix.
+- `end()`: Returns the end of the input element, including any suffix. Using `start` with this can useful for inputs that wrap some content like `textarea` and `select`.
+
+- `getFormItem(className: string = ''): HTMLElement`: Returns a form item DOM element with an outer container containing the input, label, description, error elements, etc. The className argument is a space-separated list of classes to add to the form item.
+
+- `getFormItemHTML(className: string = ''): string`: Returns the HTML of the form item. The className argument is a space-separated list of classes to add to the form item.
+
+- `appendToForm(form: HTMLElement, className: string = '')`: Appends the form item to the provided form element. The className argument is a space-separated list of classes to add to the form item.

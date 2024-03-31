@@ -646,12 +646,12 @@ export default class AppInput {
     return div
   }
 
-  getFormItemHTML(): string {
-    return this.getFormItem().outerHTML
+  getFormItemHTML(className: string): string {
+    return this.getFormItem(className).outerHTML
   }
 
   // Method to append the input to a form
-  appendToForm(form: HTMLFormElement): void {
+  appendToForm(form: HTMLFormElement, className: string): void {
     form.appendChild(this.getFormItem())
   }
 } // end class
