@@ -24,6 +24,28 @@ const inputEl = new AppInput({
 }).getFormItem('form-item')
 ```
 
+You can also pass the form element to the `appendToForm` method to append the input to the form.
+
+```javascript
+const form = document.getElementById('id-of-form')
+
+new AppInput({
+  type: 'select',
+  label: 'Choose An Option',
+  options: ['Option 1', 'Option 2', 'Option 3'],
+}).appendToForm(form, 'form-item')
+```
+
+And you can also get the raw HTML of the form item with the `getFormItemHTML` method.
+
+```javascript
+inputHTML = new AppInput({
+  type: 'textarea',
+  label: 'My Textarea',
+  placeholder: 'Enter text here',
+}).getFormItemHTML('form-item')
+```
+
 ## Types
 
 One of the most important attributes to be passed to the `AppInput` constructor is the `type` attribute. This attribute determines the type of input to be generated. Although you can pass any value you want, the following types are explicitly supported with special features:
