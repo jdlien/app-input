@@ -111,7 +111,7 @@ You can pass any attributes you want to the `AppInput` constructor, including `d
 - `horizontal`: Set to true to make all options in a radio or checkbox input appear on the same line.
 - `noErrorEl`: Set to true to prevent the creation of an error element.
 
-## Constructor and public methods:
+## Public Methods
 
 - **constructor(attributes: IAttributes & AnyAttributes)**: Initializes a new instance of `AppInput` with the provided attributes.
 
