@@ -1,24 +1,20 @@
 # AppInput
 
-`AppInput` is a TypeScript class designed to generate flexible form inputs compatible with `@jdlien/validator`.
-To use this class, you can create an instance of `AppInput` with the desired attributes and call its methods to generate HTML for form inputs.
+`AppInput` is a TypeScript class (also available as a ColdFusion CFC in [epl-customtags](https://github.com/jdlien/epl-customtags)) that generate flexible, accessible form inputs compatible with `@jdlien/validator`.
+To use this class, create an instance of `AppInput` with the desired attributes and call its methods to generate HTML for form inputs.
 
-This documentation is an early work in progress and needs further enhancement.
+## Basic Usage:
 
-## Example Usage:
+The first argument of the `AppInput` constructor is an object with input attributes. You may pass in any attributes you want, including standard HTML attributes, data attributes, etc., although some will be specially handled.
 
-The following will generate a select input with options from an array of objects and assign the resulting HTMLDivElement to `inputEl`:
+The following example creates a text input (the default) called 'input1' with an associated label.
 
-```typescript
+```javascript
 const inputEl = new AppInput({
-  type: "select",
-  name: "new-input",
-  label: "New Input",
-  error: "Please select an option.",
-  required: true,
-  options: optionData.map((item) => ({ value: item.id, label: item.name })),
-  value: "someValue",
-}).getFormItem();
+  name: "input1",
+  label: "My Input",
+  placeholder: "Enter text here",
+})
 ```
 
 ## Types

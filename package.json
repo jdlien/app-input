@@ -1,0 +1,28 @@
+{
+  "name": "@jdlien/app-input",
+  "version": "1.0.0",
+  "module": "dist/app-input.js",
+  "types": "dist/app-input.d.ts",
+  "files": [
+    "dist"
+  ],
+  "description": "Generates a sophisticated input field for forms that can support multiple options, and supports @jdlien/validator validation.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc --emitDeclarationOnly && tailwindcss -i demo/demo-src.css -o demo/demo.css -m",
+    "preview": "vite preview",
+    "test": "vitest",
+    "coverage": "vitest --coverage",
+    "tw": "tailwindcss -i demo/demo-src.css -o demo/demo.css -w -m"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "jsdom": "^24.0.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.13",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.3",
+    "vite": "^5.2.7",
+    "vitest": "^1.4.0"
+  }
+}
