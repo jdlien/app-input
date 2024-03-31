@@ -639,9 +639,9 @@ export default class AppInput {
     return html
   } // end end()
 
-  getFormItem(): HTMLDivElement {
+  getFormItem(className: string = 'form-item'): HTMLDivElement {
     let div = document.createElement('div')
-    div.className = 'form-item'
+    div.className = className
     div.innerHTML = this.start() + this.end()
     return div
   }
