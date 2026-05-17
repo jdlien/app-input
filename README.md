@@ -4,10 +4,6 @@
 
 For the full experience, with validation and other features, use this class in conjunction with `@jdlien/validator` by passing the form containing the inputs to the `Validator` constructor.
 
-## Demo
-
-[Working demo on jdlien.com](https://jdlien.com/app-input/demo/)
-
 ## Basic Usage:
 
 To use this class, create an instance of `AppInput` with the desired attributes and call its methods to generate HTML for form inputs.
